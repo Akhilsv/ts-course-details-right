@@ -86,7 +86,7 @@ header .profile_avatar img {
   top: 60px;
   right: 0;
   width: 25%;
-  height: 100%;
+  height: calc(100% - 60px);
   background: #fafafa;
   overflow-y: scroll;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -129,6 +129,11 @@ header .profile_avatar img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 55;
 }
 
 .right_side_holder .heading_holder h1 {
