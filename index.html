@@ -12,12 +12,41 @@
 			<div class="logo">
 				<img src="https://www.techsnap.in/assets/assets/main/logo.png" alt="" />
 			</div>
-			<div class="profile_avatar">
+			<div class="profile_avatar ">
 				<img
 					src="https://avatars.githubusercontent.com/u/39455174?v=4"
 					alt=""
+					class="avatar"
 				/>
 			</div>
+			<div class="profile_dropDown">
+						<a href="#" class="profile_dropDown_item">
+							<span
+								><img
+									src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-dashboard-blogger-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
+							/></span>
+							<p>View Dashboard</p>
+						</a>
+						<a href="#" class="profile_dropDown_item">
+							<span
+								><img src="https://img.icons8.com/ios/50/000000/user.png"
+							/></span>
+							<p>View Profile</p>
+						</a>
+						<a href="#" class="profile_dropDown_item">
+							<span
+								><img
+									src="https://img.icons8.com/ios/50/000000/user-not-found.png"
+							/></span>
+							<p>Edit</p>
+						</a>
+						<a href="#" class="profile_dropDown_item">
+							<span
+								><img src="https://img.icons8.com/windows/32/000000/exit.png"
+							/></span>
+							<p>Logout</p>
+						</a>
+					</div>
 		</header>
 		<div class="main_container">
 			<div class="left_side_holder">
@@ -208,5 +237,18 @@
 
 			}
 		}
+
+
+		const Profile = document.querySelector('.avatar');
+const Profile_dropDown = document.querySelector('.profile_dropDown');
+Profile.addEventListener('click', () => {
+	if (Profile_dropDown.style.opacity === '1') {
+		Profile_dropDown.style.opacity = '0';
+		Profile_dropDown.style.pointerEvents = 'none';
+	} else {
+		Profile_dropDown.style.opacity = '1';
+		Profile_dropDown.style.pointerEvents = 'all';
+	}
+});
 	</script>
 </html>
