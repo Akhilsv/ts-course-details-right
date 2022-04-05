@@ -75,9 +75,10 @@ header .profile_avatar img {
   position: relative;
 }
 
-.left_side_holder {
-  width: 75%;
-  height: 100%;
+@media (max-width: 900px) {
+  .main_container {
+    height: 100%;
+  }
 }
 
 .right_side_holder {
@@ -311,12 +312,15 @@ header .profile_avatar img {
 }
 
 .left_side_holder {
+  width: 75%;
+  height: 100%;
   padding: 20px;
 }
 
 @media (max-width: 900px) {
   .left_side_holder {
     width: 100%;
+    padding: 20px 20px 60px 20px;
   }
 }
 

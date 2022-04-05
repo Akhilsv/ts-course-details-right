@@ -50,11 +50,11 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	position: relative;
+	@media (max-width: 900px) {
+		height: 100%;
+	}
 }
-.left_side_holder {
-	width: 75%;
-	height: 100%;
-}
+
 .right_side_holder {
 	position: fixed;
 	top: 60px;
@@ -236,10 +236,13 @@ header {
 	}
 }
 .left_side_holder {
+	width: 75%;
+	height: 100%;
+	padding: 20px;
 	@media (max-width: 900px) {
 		width: 100%;
+		padding: 20px 20px 60px 20px;
 	}
-	padding: 20px;
 	p {
 		margin: 10px 0;
 	}
