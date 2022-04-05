@@ -188,16 +188,23 @@
 
 
 		const course_content = document.querySelector('.right_side_holder')
+		const body = document.querySelector('body')
 		const mobile_arrow = document.querySelector('.mobile_arrow')
 		const displayCourseContentHandler = () => {
 			console.log("clicking");
 			if(course_content.style.top!='60px'){
 				mobile_arrow.style.transform = 'rotate(0deg)';
 				course_content.style.top='60px';
+				course_content.style.overflow='auto';
+				body.style.overflow='hidden'
 			}
 			else{
 				course_content.style.top='calc(100% - 60px)';
 				mobile_arrow.style.transform = 'rotate(180deg)';
+				body.style.overflow='auto'
+				
+				course_content.style.overflow='hidden';
+
 
 			}
 		}
