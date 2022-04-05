@@ -250,5 +250,16 @@ Profile.addEventListener('click', () => {
 		Profile_dropDown.style.pointerEvents = 'all';
 	}
 });
+document.addEventListener('click', function (event) {
+	var isClickInsideAvatar = Profile.contains(event.target);
+
+	if (!isClickInsideAvatar) {
+		Profile_dropDown.style.opacity = '0';
+		Profile_dropDown.style.pointerEvents = 'none';
+	}
+	
+	
+});
+
 	</script>
 </html>
