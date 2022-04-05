@@ -188,7 +188,7 @@ header .profile_avatar img {
   font-weight: 500;
   border: none;
   outline: none;
-  height: 70px;
+  height: 60px;
   margin: 10px auto;
   background-color: #fafafa;
 }
@@ -205,13 +205,12 @@ header .profile_avatar img {
 }
 
 .right_side_holder .accordion button .accordion-title {
-  padding: 1em 1.5em 1em 0;
+  padding: 0.8em 1.5em 0.8em 0;
 }
 
 .right_side_holder .accordion button .accordion-title h1 {
   font-size: 1.1rem;
   font-weight: 500;
-  margin-bottom: 10px;
 }
 
 .right_side_holder .accordion button .accordion-title p {
@@ -272,8 +271,8 @@ header .profile_avatar img {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   will-change: opacity, max-height;
-  padding: 20px 10px;
-  margin-bottom: 20px;
+  padding: 5px 0px;
+  margin-bottom: 5px;
 }
 
 .right_side_holder .accordion .accordion-content {
@@ -302,20 +301,92 @@ header .profile_avatar img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 45px;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 10px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.right_side_holder .accordion .accordion-content .item:hover {
+  background-color: #d3d3d3;
+}
+
+.right_side_holder .accordion .accordion-content .item .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.right_side_holder .accordion .accordion-content .item .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.right_side_holder .accordion .accordion-content .item .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #a8a8a8;
+}
+
+.right_side_holder .accordion .accordion-content .item .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.right_side_holder .accordion .accordion-content .item .container input:checked ~ .checkmark {
+  background-color: #474747;
+}
+
+.right_side_holder .accordion .accordion-content .item .checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.right_side_holder .accordion .accordion-content .item .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.right_side_holder .accordion .accordion-content .item .container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .right_side_holder .accordion .accordion-content .item h1 {
   font-size: 0.8rem;
   font-weight: 500;
-  margin-bottom: 7px;
 }
 
 .right_side_holder .accordion .accordion-content .item p {
   font-size: 0.8rem;
   font-weight: 500;
+  margin-left: 40px;
   color: #8f8f8f;
 }
 

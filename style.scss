@@ -35,7 +35,7 @@ header {
 		height: 100%;
 		display: grid;
 		place-items: center;
-		
+
 		img {
 			width: 40px;
 			height: 40px;
@@ -134,7 +134,7 @@ header {
 
 		border: none;
 		outline: none;
-		height: 70px;
+		height: 60px;
 		margin: 10px auto;
 		background-color: #fafafa;
 	}
@@ -151,11 +151,10 @@ header {
 	}
 
 	.accordion button .accordion-title {
-		padding: 1em 1.5em 1em 0;
+		padding: 0.8em 1.5em 0.8em 0;
 		h1 {
 			font-size: 1.1rem;
 			font-weight: 500;
-			margin-bottom: 10px;
 		}
 		p {
 			font-size: 0.9rem;
@@ -209,8 +208,8 @@ header {
 		max-height: fit-content;
 		transition: all 200ms ease;
 		will-change: opacity, max-height;
-		padding: 20px 10px;
-		margin-bottom: 20px;
+		padding: 5px 0px;
+		margin-bottom: 5px;
 	}
 	.accordion .accordion-content {
 		opacity: 0;
@@ -227,17 +226,83 @@ header {
 			align-items: flex-start;
 			justify-content: space-between;
 			flex-direction: column;
-			height: 45px;
-			padding: 10px;
-			margin-bottom: 15px;
+			padding: 10px 15px;
+			box-sizing: border-box;
+			transition: all 0.5s ease;
+			&:hover {
+				background-color: #d3d3d3;
+			}
+			.container {
+				display: block;
+				position: relative;
+				padding-left: 35px;
+				margin-bottom: 5px;
+				cursor: pointer;
+				font-size: 22px;
+				user-select: none;
+			}
+
+			/* Hide the browser's default checkbox */
+			.container input {
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				height: 0;
+				width: 0;
+			}
+
+			/* Create a custom checkbox */
+			.checkmark {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 20px;
+				width: 20px;
+				background-color: rgb(168, 168, 168);
+			}
+
+			/* On mouse-over, add a grey background color */
+			.container:hover input ~ .checkmark {
+				background-color: #ccc;
+			}
+
+			/* When the checkbox is checked, add a blue background */
+			.container input:checked ~ .checkmark {
+				background-color: #474747;
+			}
+
+			/* Create the checkmark/indicator (hidden when not checked) */
+			.checkmark:after {
+				content: '';
+				position: absolute;
+				display: none;
+			}
+
+			/* Show the checkmark when checked */
+			.container input:checked ~ .checkmark:after {
+				display: block;
+			}
+
+			/* Style the checkmark/indicator */
+			.container .checkmark:after {
+				left: 7px;
+				top: 3px;
+				width: 5px;
+				height: 8px;
+				border: solid white;
+				border-width: 0 3px 3px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
 			h1 {
 				font-size: 0.8rem;
 				font-weight: 500;
-				margin-bottom: 7px;
 			}
 			p {
 				font-size: 0.8rem;
 				font-weight: 500;
+				margin-left: 40px;
 				color: #8f8f8f;
 			}
 		}
