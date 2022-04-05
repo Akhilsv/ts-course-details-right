@@ -103,6 +103,8 @@ header .profile_avatar img {
     top: calc(100% - 60px);
     left: 0;
     width: 100%;
+    height: calc(100% - 60px);
+    overflow-y: scroll;
   }
 }
 

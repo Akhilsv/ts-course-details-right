@@ -69,6 +69,8 @@ header {
 		top: calc(100% - 60px);
 		left: 0;
 		width: 100%;
+		height: calc(100% - 60px);
+		overflow-y: scroll;
 	}
 	.accordion .accordion-item {
 		border-bottom: 1px solid #e5e5e5;
