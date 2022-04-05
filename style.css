@@ -88,9 +88,21 @@ header .profile_avatar img {
   height: 100%;
   background: #fafafa;
   overflow-y: scroll;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   /* 	.accordion .accordion-item button[aria-expanded='true'] {
 		border-bottom: 1px solid #03b5d2;
 	} */
+}
+
+@media (max-width: 900px) {
+  .right_side_holder {
+    top: calc(100% - 60px);
+    left: 0;
+    width: 100%;
+  }
 }
 
 .right_side_holder .accordion .accordion-item {
@@ -105,11 +117,43 @@ header .profile_avatar img {
   background: #000000;
   color: #fff;
   padding: 15px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .right_side_holder .heading_holder h1 {
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.right_side_holder .heading_holder .mobile_arrow {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .right_side_holder .heading_holder .mobile_arrow {
+    display: block;
+  }
+}
+
+.right_side_holder .heading_holder .mobile_arrow img {
+  width: 100%;
+  height: 100%;
 }
 
 .right_side_holder .accordion button {
@@ -268,6 +312,12 @@ header .profile_avatar img {
 
 .left_side_holder {
   padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .left_side_holder {
+    width: 100%;
+  }
 }
 
 .left_side_holder p {

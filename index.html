@@ -39,6 +39,9 @@
 				<div class="accordion">
 					<div class="heading_holder">
 						<h1>Course Content</h1>
+						<div class="mobile_arrow" onclick="displayCourseContentHandler()">
+							<img src="https://cdn-icons.flaticon.com/png/512/2985/premium/2985150.png?token=exp=1649142186~hmac=eb329cab86dcece8ed5c716dc1adec24" alt="">
+						</div>
 					</div>
 					<div class="accordion-item">
 						<button id="accordion-button-1" aria-expanded="false">
@@ -182,5 +185,21 @@
 		}
 
 		items.forEach((item) => item.addEventListener('click', toggleAccordion));
+
+
+		const course_content = document.querySelector('.right_side_holder')
+		const mobile_arrow = document.querySelector('.mobile_arrow')
+		const displayCourseContentHandler = () => {
+			console.log("clicking");
+			if(course_content.style.top!='60px'){
+				mobile_arrow.style.transform = 'rotate(0deg)';
+				course_content.style.top='60px';
+			}
+			else{
+				course_content.style.top='calc(100% - 60px)';
+				mobile_arrow.style.transform = 'rotate(180deg)';
+
+			}
+		}
 	</script>
 </html>
