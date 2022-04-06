@@ -168,7 +168,7 @@ header .profile_avatar img {
 
 @media (max-width: 900px) {
   .right_side_holder {
-    left: 0;
+    left: -100%;
     width: 100vw;
     height: calc(100% - 60px);
     overflow-y: scroll;
@@ -443,7 +443,7 @@ header .profile_avatar img {
 @media (max-width: 900px) {
   .left_side_holder {
     width: 100%;
-    padding: 20px 20px 60px 20px;
+    padding: 20px 15px 20px 15px;
   }
 }
 
@@ -485,10 +485,6 @@ header .profile_avatar img {
 @media (max-width: 700px) {
   .left_side_holder .control_btn_holder {
     height: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
@@ -506,6 +502,8 @@ header .profile_avatar img {
 
 @media (max-width: 700px) {
   .left_side_holder .control_btn_holder button {
+    font-size: 0.8rem;
+    padding: 8px 10px;
     margin-bottom: 10px;
   }
 }
@@ -590,6 +588,12 @@ header .profile_avatar img {
   padding: 20px 10px;
 }
 
+@media (max-width: 900px) {
+  .tab_section .tabcontent {
+    padding: 10px 0;
+  }
+}
+
 .tab_section .tabcontent h1 {
   font-size: 1rem;
 }
@@ -614,7 +618,9 @@ header .profile_avatar img {
 
 @media (max-width: 750px) {
   .tab_section .tab button {
-    font-size: 1.5rem;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 14px 6px;
   }
 }
 
@@ -682,6 +688,18 @@ header .profile_avatar img {
   margin-bottom: 20px;
 }
 
+@media (max-width: 700px) {
+  .QA_conatiner .QA_section .QA_item {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 10px 3px;
+  }
+}
+
 .QA_conatiner .QA_section .QA_item .right_sec {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -710,6 +728,13 @@ header .profile_avatar img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  .QA_conatiner .QA_section .QA_item .right_sec .comments {
+    height: 100%;
+    margin-left: 10px;
+  }
 }
 
 .QA_conatiner .QA_section .QA_item .right_sec .comments span {
@@ -742,13 +767,37 @@ header .profile_avatar img {
           flex-direction: column;
 }
 
+@media (max-width: 700px) {
+  .QA_conatiner .QA_section .QA_item .left_sec {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+}
+
 .QA_conatiner .QA_section .QA_item .left_sec p {
   font-size: 0.9rem;
   font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .QA_conatiner .QA_section .QA_item .left_sec p span {
   margin-left: 5px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .QA_conatiner .QA_section .QA_item .left_sec p span img {

@@ -111,7 +111,7 @@ header {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	transition: all 0.5s ease;
 	@media (max-width: 900px) {
-		left: 0;
+		left: -100%;
 		width: 100vw;
 		height: calc(100% - 60px);
 		overflow-y: scroll;
@@ -339,7 +339,7 @@ header {
 	transition: all 0.5s ease;
 	@media (max-width: 900px) {
 		width: 100%;
-		padding: 20px 20px 60px 20px;
+		padding: 20px 15px 20px 15px;
 	}
 	p {
 		margin: 10px 0;
@@ -363,7 +363,6 @@ header {
 		justify-content: space-between;
 		@media (max-width: 700px) {
 			height: 100%;
-			flex-direction: column;
 		}
 		button {
 			outline: none;
@@ -375,6 +374,9 @@ header {
 			cursor: pointer;
 			transition: all 0.5s ease;
 			@media (max-width: 700px) {
+				font-size: 0.8rem;
+				padding: 8px 10px;
+
 				margin-bottom: 10px;
 			}
 			&:hover {
@@ -433,6 +435,9 @@ header {
 	height: 50vh;
 	.tabcontent {
 		padding: 20px 10px;
+		@media (max-width: 900px) {
+			padding: 10px 0;
+		}
 		h1 {
 			font-size: 1rem;
 		}
@@ -454,7 +459,9 @@ header {
 		text-transform: capitalize;
 		border-bottom: solid 2px #3910db00;
 		@media (max-width: 750px) {
-			font-size: 1.5rem;
+			margin-top: 20px;
+			font-size: 1rem;
+			padding: 14px 6px;
 		}
 	}
 
@@ -506,8 +513,15 @@ header {
 			justify-content: space-between;
 			padding: 10px 20px;
 			margin-bottom: 20px;
+			@media (max-width: 700px) {
+				height: 100%;
+				flex-direction: column;
+				width: 100%;
+				padding: 10px 3px;
+			}
 			.right_sec {
 				display: flex;
+
 				.profile {
 					img {
 						width: 40px;
@@ -523,6 +537,10 @@ header {
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
+					@media (max-width: 700px) {
+						height: 100%;
+						margin-left: 10px;
+					}
 					span {
 						font-size: 0.7rem;
 						i {
@@ -544,11 +562,22 @@ header {
 				display: flex;
 				align-items: flex-end;
 				flex-direction: column;
+				@media (max-width: 700px) {
+					flex-direction: row;
+					align-items: center;
+					justify-content: space-around;
+					width: 100%;
+				}
 				p {
 					font-size: 0.9rem;
 					font-weight: 600;
+					display: flex;
+					align-items: center;
+
 					span {
 						margin-left: 5px;
+						display: grid;
+						place-items: center;
 						img {
 							width: 20px;
 						}
