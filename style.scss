@@ -60,11 +60,17 @@ header {
 			height: 40px;
 			margin-right: 10px;
 			accent-color: rgb(220, 22, 238);
+			@media (max-width: 900px) {
+				display: none;
+			}
 		}
 
 		h4 {
 			margin-right: 40px;
 			color: #fff;
+			@media (max-width: 900px) {
+				display: none;
+			}
 		}
 	}
 	.profile_avatar {
@@ -689,4 +695,3 @@ header {
 #hidden_comment {
 	display: none;
 }
-

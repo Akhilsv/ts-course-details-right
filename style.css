@@ -95,9 +95,21 @@ header .right_side_header progress {
   accent-color: #dc16ee;
 }
 
+@media (max-width: 900px) {
+  header .right_side_header progress {
+    display: none;
+  }
+}
+
 header .right_side_header h4 {
   margin-right: 40px;
   color: #fff;
+}
+
+@media (max-width: 900px) {
+  header .right_side_header h4 {
+    display: none;
+  }
 }
 
 header .profile_avatar {
