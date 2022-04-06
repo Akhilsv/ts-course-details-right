@@ -53,7 +53,7 @@ header .ham {
   place-items: center;
   border-radius: 50%;
   cursor: pointer;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
 header .ham img {
@@ -137,9 +137,9 @@ header .profile_avatar img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: relative;
 }
 
@@ -152,7 +152,7 @@ header .profile_avatar img {
 .right_side_holder {
   position: fixed;
   top: 60px;
-  left: -100%;
+  right: -100%;
   width: 25%;
   height: calc(100% - 60px);
   background: #fafafa;
@@ -168,7 +168,7 @@ header .profile_avatar img {
 
 @media (max-width: 900px) {
   .right_side_holder {
-    left: -100%;
+    right: -100%;
     width: 100vw;
     height: calc(100% - 60px);
     overflow-y: scroll;

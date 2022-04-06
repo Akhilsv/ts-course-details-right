@@ -10,12 +10,7 @@
 	<body>
 		<header>
 			<div class="left_side_header">
-				<div class="ham" onclick="displayCourseContentHandler()">
-					<img
-						src="https://icon-library.com/images/hamburger-menu-icon-svg/hamburger-menu-icon-svg-17.jpg"
-						alt=""
-					/>
-				</div>
+				
 				<div class="logo">
 					<img
 						src="https://www.techsnap.in/assets/assets/main/logo.png"
@@ -32,6 +27,12 @@
 						src="https://avatars.githubusercontent.com/u/39455174?v=4"
 						alt=""
 						class="avatar"
+					/>
+				</div>
+				<div class="ham" onclick="displayCourseContentHandler()">
+					<img
+						src="https://icon-library.com/images/hamburger-menu-icon-svg/hamburger-menu-icon-svg-17.jpg"
+						alt=""
 					/>
 				</div>
 			</div>
@@ -878,16 +879,16 @@
 
 		let x = window.matchMedia('(max-width: 700px)');
 		const displayCourseContentHandler = () => {
-			if (course_content.style.left === '0px') {
+			if (course_content.style.right === '0px') {
 				console.log('here');
 				middlecontent.style.width = '100%';
-				course_content.style.left = '-100%';
+				course_content.style.right = '-100%';
 				if (x.matches) {
 					body.style.overflow = 'auto';
 					course_content.style.overflow = 'hidden';
 				}
 			} else {
-				course_content.style.left = '0px';
+				course_content.style.right = '0px';
 				middlecontent.style.width = '75%';
 				course_content.style.overflow = 'auto';
 				if (x.matches) {
