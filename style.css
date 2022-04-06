@@ -31,6 +31,37 @@ header {
   z-index: 555;
 }
 
+header .left_side_header {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .ham {
+  width: 40px;
+  height: 40px;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+header .ham img {
+  width: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 header .logo {
   width: 90px;
   height: 100%;
@@ -70,9 +101,9 @@ header .profile_avatar img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   position: relative;
 }
 
@@ -85,7 +116,7 @@ header .profile_avatar img {
 .right_side_holder {
   position: fixed;
   top: 60px;
-  right: 0;
+  left: 0;
   width: 25%;
   height: calc(100% - 60px);
   background: #fafafa;
@@ -516,5 +547,57 @@ header .profile_avatar img {
   width: 22px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.tab_section {
+  width: 100%;
+  height: 50vh;
+  /* Change background color of buttons on hover */
+  /* Create an active/current tablink class */
+  /* Style the tab content */
+}
+
+.tab_section .tabcontent {
+  padding: 20px 10px;
+}
+
+.tab_section .tabcontent h1 {
+  font-size: 1rem;
+}
+
+.tab_section .tab {
+  overflow: hidden;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.tab_section .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-bottom: solid 2px #3910db00;
+}
+
+@media (max-width: 750px) {
+  .tab_section .tab button {
+    font-size: 1.5rem;
+  }
+}
+
+.tab_section .tab button:hover {
+  background: #ccc;
+}
+
+.tab_section .tab button.active {
+  border-bottom: solid 2px #3810db;
+}
+
+.tab_section .tabcontent {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
